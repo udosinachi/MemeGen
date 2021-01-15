@@ -1,4 +1,6 @@
 import React from 'react'
+import { Container, Form } from 'react-bootstrap'
+import './bootstrap.min.css'
 
 class MemeGenerator extends React.Component {
   constructor() {
@@ -36,32 +38,38 @@ class MemeGenerator extends React.Component {
 
   render() {
     return (
-      <div>
-        <form className='memeform' onSubmit={this.buttonChange}>
-          <input
-            type='text'
-            name='topText'
-            placeholder='Top Text'
-            value={this.state.topText}
-            onChange={this.change}
-          />
+      <Container className='py-3'>
+        <Form onSubmit={this.buttonChange}>
+          <Form.Group>
+            <Form.Control
+              type='text'
+              name='topText'
+              placeholder='Top Text'
+              value={this.state.topText}
+              onChange={this.change}
+            />
+            <br />
+            <Form.Control
+              type='text'
+              name='bottomText'
+              placeholder='Bottom Text'
+              value={this.state.bottomText}
+              onChange={this.change}
+            />
+          </Form.Group>
 
-          <input
-            type='text'
-            name='bottomText'
-            placeholder='Bottom Text'
-            value={this.state.bottomText}
-            onChange={this.change}
-          />
-
-          <button>Gen</button>
-        </form>
-        <div className='meme'>
-          <img src={this.state.randomImg} alt='' />
-          <h2 className='top'>{this.state.topText}</h2>
-          <h2 className='bottom'>{this.state.bottomText}</h2>
-        </div>
-      </div>
+          <button className='btn btn-block bg-success'>GENERATE</button>
+        </Form>
+        <Container className='py-3 text-center'>
+          <img src={this.state.randomImg} alt='' className='img' />
+          <h2 className='top'>
+            <strong>{this.state.topText}</strong>
+          </h2>
+          <h2 className='bottom'>
+            <strong>{this.state.bottomText}</strong>
+          </h2>
+        </Container>
+      </Container>
     )
   }
 }

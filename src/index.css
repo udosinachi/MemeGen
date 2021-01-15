@@ -1,13 +1,170 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.top {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: white;
+  z-index: 1;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bottom {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 100%;
+  left: 25%;
+}
+.img {
+  width: 70%;
+  height: 400px;
+}
+@media (max-width: 995px) {
+  .img {
+    width: 90%;
+    height: 350px;
+  }
+  .bottom {
+    top: 90%;
+    left: 25%;
+    font-size: large;
+  }
+  .top {
+    left: 25%;
+    font-size: large;
+  }
+}
+@media (max-width: 880px) {
+  .img {
+    width: 90%;
+    height: 350px;
+  }
+  .bottom {
+    top: 90%;
+    left: 20%;
+    font-size: large;
+  }
+  .top {
+    left: 20%;
+    font-size: large;
+  }
+}
+@media (max-width: 770px) {
+  .img {
+    width: 100%;
+    height: 300px;
+  }
+  .bottom {
+    top: 80%;
+    left: 20%;
+    font-size: medium;
+  }
+  .top {
+    left: 20%;
+    font-size: medium;
+  }
+}
+@media (max-width: 740px) {
+  .img {
+    width: 100%;
+    height: 300px;
+  }
+  .bottom {
+    top: 85%;
+    left: 20%;
+    font-size: medium;
+  }
+  .top {
+    left: 20%;
+    font-size: medium;
+  }
+}
+@media (max-width: 580px) {
+  .img {
+    width: 90%;
+    height: 280px;
+  }
+  .bottom {
+    top: 90%;
+    font-size: small;
+  }
+  .top {
+    font-size: small;
+  }
+}
+@media (max-width: 500px) {
+  .img {
+    width: 90%;
+    height: 250px;
+  }
+  .bottom {
+    top: 80%;
+  }
+  .top {
+    top: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .img {
+    width: 90%;
+    height: 250px;
+  }
+  .bottom {
+    top: 83%;
+    left: 15%;
+  }
+  .top {
+    top: 50%;
+    left: 15%;
+  }
+}
+@media (max-width: 415px) {
+  .img {
+    width: 100%;
+    height: 250px;
+  }
+  .bottom {
+    top: 75%;
+  }
+  .top {
+    top: 50%;
+  }
+}
+@media (max-width: 380px) {
+  .img {
+    width: 100%;
+    height: 250px;
+  }
+  .bottom {
+    top: 80%;
+    left: 10%;
+  }
+  .top {
+    top: 50%;
+    left: 10%;
+  }
+}
+@media (max-width: 350px) {
+  .img {
+    width: 100%;
+    height: 250px;
+  }
+  .bottom {
+    top: 75%;
+  }
+  .top {
+    top: 50%;
+  }
+}
+@media (max-width: 312px) {
+  .header {
+    display: none;
+  }
+  .img {
+    width: 100%;
+    height: 250px;
+  }
+  .bottom {
+    top: 75%;
+  }
+  .top {
+    top: 50%;
+  }
 }
